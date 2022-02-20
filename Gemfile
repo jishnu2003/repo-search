@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -11,6 +13,7 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem "octokit", "~> 4.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

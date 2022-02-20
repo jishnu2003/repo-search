@@ -1,0 +1,14 @@
+<h1>Search Repositories</h1>
+<%= form_tag repositories_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<% if @repos.nil? %>
+  <h3>Hey, Search for your favorite public github repo</h3>
+<% else %>
+  <% @repos.data.each do |repo| %>
+    <%= content_tag(:li, link_to(repo.full_name, repo.url, target: "_blank")) %>
+  <% end %>
+<% end %>
