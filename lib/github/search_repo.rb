@@ -5,7 +5,7 @@ class SearchRepo
     def where(name, opts = {})
       per_page = opts[:per_page] || 10
       page_no = opts[:page_no] || 1
-      repos = OCTOKIT.search_repositories("#{name} in:name", { per_page: per_page, page_no: page_no })
+      repos = OCTOKIT.search_repositories("#{name} in:name", { per_page: per_page, page: page_no })
       parse_response(repos, opts)
     end
 

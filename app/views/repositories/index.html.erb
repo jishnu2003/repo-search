@@ -12,3 +12,6 @@
     <%= content_tag(:li, link_to(repo.full_name, repo.url, target: "_blank")) %>
   <% end %>
 <% end %>
+<br>
+<%= link_to 'Prev page', root_path(search: params[:search], page: @current_page - 1) %>
+<%= link_to 'Next page', root_path(search: params[:search], page: @current_page + 1) %>
