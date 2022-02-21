@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jishnu/learning/repo-search/app/services/repos/search.rb": {
+      "/repo-search/app/services/repos/search.rb": {
         "lines": [
           null,
           null,
@@ -28,7 +28,7 @@
           null
         ]
       },
-      "/Users/jishnu/learning/repo-search/app/services/base_service.rb": {
+      "/repo-search/app/services/base_service.rb": {
         "lines": [
           null,
           null,
@@ -39,7 +39,35 @@
           null
         ]
       },
-      "/Users/jishnu/learning/repo-search/lib/github/search_repo.rb": {
+      "/repo-search/app/controllers/repositories_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/repo-search/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/repo-search/lib/github/search_repo.rb": {
         "lines": [
           null,
           null,
@@ -68,36 +96,8 @@
           null,
           null
         ]
-      },
-      "/Users/jishnu/learning/repo-search/app/controllers/repositories_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          null,
-          1,
-          2,
-          null,
-          2,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/jishnu/learning/repo-search/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1645468228
+    "timestamp": 1645470249
   }
 }

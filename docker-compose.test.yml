@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+  repo-search:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    command:
+      - /bin/sh
+      - -c
+      - |
+        bundle config set without 'development best_practices' 
+        bundle install --quiet
+        rspec spec 
+        --rm
+    volumes:
+      - .:/repo-search/
+    environment:
+      RAILS_ENV: test
+      RAILS_LOG_TO_STDOUT: 'true'
+    entrypoint: ./docker-entrypoint.sh
