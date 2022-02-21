@@ -2,8 +2,8 @@
 
 require 'octokit'
 
-OCTOKIT = Octokit::Client.new
-
-Octokit.configure do |c|
-  c.auto_paginate = true
+OCTOKIT = if ENV['access_token'].present?
+  Octokit::Client.new(access_token: ENV['access_token'])
+else
+  Octokit::Client.new
 end

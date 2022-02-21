@@ -11,7 +11,13 @@
   <% @repos.data.each do |repo| %>
     <%= content_tag(:li, link_to(repo.full_name, repo.url, target: "_blank")) %>
   <% end %>
+
+  <br>
+  <% if @repos.total_count.positive? %>
+    <%= link_to 'Prev page', root_path(search: params[:search], page: @current_page - 1) %>
+    <%= link_to 'Next page', root_path(search: params[:search], page: @current_page + 1) %>
+  <% else %>
+    <h3>No matching repositories found</h3>
+  <% end %>
 <% end %>
-<br>
-<%= link_to 'Prev page', root_path(search: params[:search], page: @current_page - 1) %>
-<%= link_to 'Next page', root_path(search: params[:search], page: @current_page + 1) %>
+

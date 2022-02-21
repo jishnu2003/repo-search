@@ -23,6 +23,8 @@ require 'rspec/rails'
 # require only the support files necessary.
 #
 # Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+require 'simplecov'
+SimpleCov.start 'rails'
 
 RSpec.configure do |config|
   # Remove this line to enable support for ActiveRecord
